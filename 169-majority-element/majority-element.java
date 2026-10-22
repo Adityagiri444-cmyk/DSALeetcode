@@ -1,0 +1,17 @@
+class Solution {
+    public int majorityElement(int[] nums) {
+        int count = 0, num = 0;
+
+        for (int n : nums) {
+            if (count == 0)
+                num = n;
+
+            if (n == num)
+                count++;
+            else
+                count--;
+        }
+
+        return num;
+    }
+}
